@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for i in range(0,99):
-    print("{i} = \n".format(hex(i)), end='')
+    print("{i} = {hex}\n".format(i = i, hex = hex(i)), end='')
