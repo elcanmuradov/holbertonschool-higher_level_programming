@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    count = len(argv)
+    count = len(args)
     if count > 1:
         print("{} arguments:".format(count))
         for i in (1,count + 1):
