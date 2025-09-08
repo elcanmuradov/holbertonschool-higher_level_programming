@@ -2,4 +2,5 @@
 
 def print_list_integer(my_list=[]):
     for i in my_list:
-        print("{int}".format(i))
+        if i => 0 and i <= 9:
+            print("{int}".format(i))
