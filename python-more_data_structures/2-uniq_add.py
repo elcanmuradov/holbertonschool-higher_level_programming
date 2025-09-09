@@ -2,10 +2,10 @@
 
 def uniq_add(my_list=[]):
     sum = 0
-    uniq = 0
+    uniq = []
     for i in my_list:
-        sum += i
-        for k in my_list:
-            if i == k:
-                uniq += k
-    return sum - uniq
+        if uniq.find(i) == -1:
+            sum += i
+            uniq.append(i)
+    return sum
+    
