@@ -2,6 +2,10 @@
 
 def multiply_by_2(a_dictionary):
     if a_dictionary is None:
-        return
+        return None
+    
+    new_dict = {}
     for key in a_dictionary:
-        a_dictionary[key] = a_dictionary[key] * 2
+        new_dict[key] = a_dictionary[key] * 2
+    
+    return new_dict
