@@ -3,6 +3,7 @@
 def only_diff_elements(set_1, set_2):
     common_list = []
     new_list = []
+    sum_list = []
     for i in set_1:
         for k in set_2:
             if i == k:
