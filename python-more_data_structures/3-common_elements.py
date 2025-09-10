@@ -7,4 +7,3 @@ def common_elements(set_1, set_2):
             if i == k:
                 new_list.append(i)
     return new_list
-    
