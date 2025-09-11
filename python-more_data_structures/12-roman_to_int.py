@@ -31,4 +31,5 @@ def roman_to_int(roman_string):
                 number += change_number(roman_string[i])
             else:
                 number -= change_number(roman_string[i])
-        number += change_number(roman_string[len(roman_string) - 1])    
+        number += change_number(roman_string[len(roman_string) - 1])   
+        return number 
