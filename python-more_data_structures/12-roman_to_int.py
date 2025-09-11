@@ -22,13 +22,16 @@ def change_number(num):
 # LXXXVII
 def roman_to_int(roman_string):
     number = 0
-    for i in range(0, len(roman_string) - 1):
-        if change_number(i) >= change_number(i + 1):
-            number += change_number(i)
-        else:
-            number -= change_number(i)
-    if change_number(roman_string[len(roman_string) - 1]) <= change_number(roman_string[len(roman_string) - 2]):
-        number += change_number(roman_string[len(roman_string) - 1])
+    if len(roman_string) == 1:
+        return change_number(roman_string)
     else:
-        number -= change_number(roman_string[len(roman_string) - 2])
-    return number        
+        for i in range(0, len(roman_string) - 1):
+            if change_number(i) >= change_number(i + 1):
+                number += change_number(i)
+            else:
+                number -= change_number(i)
+        if change_number(roman_string[len(roman_string) - 1]) <= change_number(roman_string[len(roman_string) - 2]):
+            number += change_number(roman_string[len(roman_string) - 1])
+        else:
+            number -= change_number(roman_string[len(roman_string) - 2])
+        return number        
