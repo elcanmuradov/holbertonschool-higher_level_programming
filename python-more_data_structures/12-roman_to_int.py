@@ -18,18 +18,18 @@ def change_number(num):
     else:
         return -1
     
-# IV
+# III
 def roman_to_int(roman_string):
-    if roman_string is None or roman_string is int:
+    if roman_string is None or roman_string is not str:
         return None
     number = 0
     if len(roman_string) == 1:
         return change_number(roman_string)
     else:
-        for i in range(0, len(roman_string) - 2):
+        for i in range(0, len(roman_string) - 1):
             if change_number(roman_string[i]) >= change_number(roman_string[i + 1]):
                 number += change_number(roman_string[i])
             else:
                 number -= change_number(roman_string[i])
         number += change_number(roman_string[len(roman_string) - 1])   
-        return number 
+        return number
