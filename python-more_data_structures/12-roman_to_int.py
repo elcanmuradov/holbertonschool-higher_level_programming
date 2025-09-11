@@ -20,7 +20,7 @@ def change_number(num):
     
 # III
 def roman_to_int(roman_string):
-    if roman_string is None or roman_string is not str:
+    if roman_string is None or roman_string is str:
         return 0
     number = 0
     if len(roman_string) == 1:
