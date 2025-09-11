@@ -21,7 +21,7 @@ def change_number(num):
 # III
 def roman_to_int(roman_string):
     if roman_string is None or roman_string is int:
-        return None
+        return 0
     number = 0
     if len(roman_string) == 1:
         return change_number(roman_string)
