@@ -27,10 +27,10 @@ def roman_to_int(roman_string):
         return change_number(roman_string)
     else:
         for i in range(0, len(roman_string) - 1):
-            if change_number(i) >= change_number(i + 1):
-                number += change_number(i)
+            if change_number(roman_string[i]) >= change_number(roman_string[i + 1]):
+                number += change_number(roman_string[i])
             else:
-                number -= change_number(i)
+                number -= change_number(roman_string[i])
         if change_number(roman_string[len(roman_string) - 1]) <= change_number(roman_string[len(roman_string) - 2]):
             number += change_number(roman_string[len(roman_string) - 1])
         else:
