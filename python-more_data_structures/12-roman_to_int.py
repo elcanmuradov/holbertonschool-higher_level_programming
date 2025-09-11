@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 def change_number(num):
-    match num:
+    match num.upper():
         case 'I':
             return 1
         case 'V':
