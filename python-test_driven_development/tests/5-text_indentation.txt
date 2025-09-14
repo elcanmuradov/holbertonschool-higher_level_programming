@@ -1,0 +1,98 @@
+The ``text_indentation`` module
+=================================
+
+Using ``text_indentation``
+--------------------------
+
+Importing the function from the module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+Basic text with period:
+    >>> text_indentation("Hello. World")
+    Hello.
+    <BLANKLINE>
+    World
+
+Text with question mark:
+    >>> text_indentation("How are you? Fine")
+    How are you?
+    <BLANKLINE>
+    Fine
+
+Text with colon:
+    >>> text_indentation("Name: John")
+    Name:
+    <BLANKLINE>
+    John
+
+Text with multiple special characters:
+    >>> text_indentation("Hello. How are you? Good: thanks")
+    Hello.
+    <BLANKLINE>
+    How are you?
+    <BLANKLINE>
+    Good:
+    <BLANKLINE>
+    thanks
+
+Text with spaces after special characters:
+    >>> text_indentation("Hello.   World")
+    Hello.
+    <BLANKLINE>
+    World
+
+Text with multiple spaces after special characters:
+    >>> text_indentation("Test:     result")
+    Test:
+    <BLANKLINE>
+    result
+
+Empty string:
+    >>> text_indentation("")
+
+Single special character:
+    >>> text_indentation(".")
+    .
+    <BLANKLINE>
+
+Text ending with special character:
+    >>> text_indentation("End.")
+    End.
+    <BLANKLINE>
+
+Text with no special characters:
+    >>> text_indentation("Hello World")
+    Hello World
+
+Text with consecutive special characters:
+    >>> text_indentation("Test.?:")
+    Test.
+    <BLANKLINE>
+    ?
+    <BLANKLINE>
+    :
+    <BLANKLINE>
+
+Text with newlines:
+    >>> text_indentation("Line1.\nLine2")
+    Line1.
+    <BLANKLINE>
+    
+    Line2
+
+Error handling - text is not a string (integer):
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Error handling - text is not a string (None):
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+Error handling - text is not a string (list):
+    >>> text_indentation(["hello"])
+    Traceback (most recent call last):
+    TypeError: text must be a string
