@@ -73,9 +73,9 @@ Error handling - empty matrix:
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
 
-Error handling - matrix with empty row:
+Error handling - matrix with empty rows:
     >>> matrix_divided([[], []], 2)
-    [[]]
+    [[], []]
 
 Large numbers:
     >>> matrix_divided([[1000000, 2000000]], 1000000)
