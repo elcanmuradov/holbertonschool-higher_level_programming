@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module provides a function for adding two integers.
+"""
+
+
 def add_integer(a, b=98):
     """
     Adds two integers
@@ -18,9 +23,6 @@ def add_integer(a, b=98):
     
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-    
-    # Cast floats to integers
     a = int(a)
     b = int(b)
-    
     return a + b
