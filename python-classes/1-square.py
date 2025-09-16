@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-
-"""Module that defines an empty Square class with size."""
-
+"""Module that defines a Square class with a private size attribute."""
 
 class Square:
-        """The size of square"""
+    """Class that defines a square."""
+
     def __init__(self, size):
-        _size = size
+        """Initialize a new Square with a given size (no validation)."""
+        self.__size = size
