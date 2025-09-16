@@ -17,3 +17,5 @@ class Square:
     """Find area of initizialied Square"""
     def area(self):
         return self.__size * self.__size
+
+    
