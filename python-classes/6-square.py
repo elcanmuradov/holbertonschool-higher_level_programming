@@ -33,11 +33,8 @@ class Square:
     @size.setter
     def position(self, value):
         """Set the position of the square, with validation."""
-        if not isinstance(value, int):
+        if not isinstance(value[0], int) and not isinstance(value[0], int):
             raise TypeError("position must be a tuple of 2 positive integers")
-        if value < 0:
-            raise ValueError("size must be >= 0")
-        self.__position = value
 
     def area(self):
         """Calculate and return the current area of the square."""
