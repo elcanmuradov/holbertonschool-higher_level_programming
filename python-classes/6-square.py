@@ -7,7 +7,9 @@ class Square:
 
     def __init__(self, size=0), position=(0, 0):
         """Initialize a new Square with an optional size."""
-        self.size = size  # Use setter for validation
+        self.size = size  
+        """Initialize a new Square with an optional position."""
+        self.position = position
 
     @property
     def size(self):
