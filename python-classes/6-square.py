@@ -54,4 +54,3 @@ class Square:
             for k in range(0, self.__size):
                 print("#", end="")
             print()
-print(Square(9,(2, 3)).position)
