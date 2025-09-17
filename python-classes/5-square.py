@@ -30,7 +30,7 @@ class Square:
         """Print console the square"""
         if self.__size == 0:
             print()
-        for i in range(0,self.__size):
-            for k in range(0,self.__size):
-                print("#",end="")
+        for i in range(0, self.__size):
+            for k in range(0, self.__size):
+                print("#", end="")
             print()
