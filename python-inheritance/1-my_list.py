@@ -4,7 +4,7 @@
 
 class MyList(list):
     """Class the defines new list"""
-    def __init__(self,newList=[]):
+    def __init__(self, newList=[]):
         """Initialize a new list"""
         self.newList = newList
 
