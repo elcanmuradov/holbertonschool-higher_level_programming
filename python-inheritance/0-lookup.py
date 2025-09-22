@@ -2,4 +2,4 @@
 """Module that defines an an object"""
 def lookup(obj):
     """Returns attributes"""
-    dir(obj)
+    return dir(obj)
