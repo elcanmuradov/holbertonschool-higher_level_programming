@@ -26,7 +26,7 @@ class Square(Rectangle):
     def __str__(self):
         """
         Return string representation of the square.
-        
+
         Returns:
             str: Square description in format [Square] <width>/<height>
         """
