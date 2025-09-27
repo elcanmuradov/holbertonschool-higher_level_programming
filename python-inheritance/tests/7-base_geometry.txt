@@ -1,65 +1,21 @@
 #!/usr/bin/python3
-"""Test cases for BaseGeometry class."""
+"""
+Test cases for BaseGeometry class.
 
-import sys
-import os
-
-# Add the parent directory to the path to import the module
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from 7-base_geometry import BaseGeometry
-
-def test_integer_validator():
-    """Test the integer_validator method."""
-    bg = BaseGeometry()
-    
-    # Test valid integers
-    try:
-        bg.integer_validator("my_int", 12)
-        bg.integer_validator("width", 89)
-        print("Valid integers passed validation")
-    except Exception as e:
-        print("Unexpected error: [{}] {}".format(e.__class__.__name__, e))
-    
-    # Test non-integer values
-    try:
-        bg.integer_validator("name", "John")
-        print("ERROR: String should have raised TypeError")
-    except TypeError as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-    except Exception as e:
-        print("Unexpected error: [{}] {}".format(e.__class__.__name__, e))
-    
-    # Test zero value
-    try:
-        bg.integer_validator("age", 0)
-        print("ERROR: Zero should have raised ValueError")
-    except ValueError as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-    except Exception as e:
-        print("Unexpected error: [{}] {}".format(e.__class__.__name__, e))
-    
-    # Test negative value
-    try:
-        bg.integer_validator("distance", -4)
-        print("ERROR: Negative should have raised ValueError")
-    except ValueError as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-    except Exception as e:
-        print("Unexpected error: [{}] {}".format(e.__class__.__name__, e))
-
-def test_area_method():
-    """Test the area method."""
-    bg = BaseGeometry()
-    
-    try:
-        bg.area()
-        print("ERROR: area() should have raised Exception")
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-
-if __name__ == "__main__":
-    print("Testing integer_validator method:")
-    test_integer_validator()
-    print("\nTesting area method:")
-    test_area_method()
+>>> from 7-base_geometry import BaseGeometry
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("my_int", 12)
+>>> bg.integer_validator("width", 89)
+>>> bg.integer_validator("name", "John")
+Traceback (most recent call last):
+TypeError: name must be an integer
+>>> bg.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+>>> bg.integer_validator("distance", -4)
+Traceback (most recent call last):
+ValueError: distance must be greater than 0
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+"""
