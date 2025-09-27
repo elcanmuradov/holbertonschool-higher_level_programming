@@ -11,10 +11,10 @@ class Rectangle(BaseGeometry):
     def __init__(self, width, height):
         """
         Initialize a Rectangle with width and height.
-        
+
         Args:
             width (int): The width of the rectangle (must be positive integer)
-            height (int): The height of the rectangle (must be positive integer)
+            height (int): The heigf the rectangle (must be positive integer)
 
         Raises:
             TypeError: If width or height is not an integer
@@ -28,7 +28,7 @@ class Rectangle(BaseGeometry):
     def area(self):
         """
         Calculate the area of the rectangle.
-        
+
         Returns:
             int: The area of the rectangle (width * height)
         """
@@ -37,7 +37,7 @@ class Rectangle(BaseGeometry):
     def __str__(self):
         """
         Return string representation of the rectangle.
-        
+
         Returns:
             str: Rectangle description in format [Rectangle] <width>/<height>
         """
