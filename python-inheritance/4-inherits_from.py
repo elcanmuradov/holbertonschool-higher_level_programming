@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module that provides a function to check if an object is an instance of a class that inherited from a specified class."""
+"""Module that provides a function  a class that inherspecified class."""
 
 """Module that provides a function to check if an object is an instance
 of a class that inherited from a specified class."""
